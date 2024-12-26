@@ -1,0 +1,21 @@
+package com.sathya.springbootmvc.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class EmployeeEntity {
+	private String name;
+	private double salary;
+	private int age;
+	private String gender;
+	private String department;
+	private String experience;
+	private double da;
+	private double hra;
+	private double pf;
+	private double totalSalary;
+	private double grossSalary;
+	
+
+
+}

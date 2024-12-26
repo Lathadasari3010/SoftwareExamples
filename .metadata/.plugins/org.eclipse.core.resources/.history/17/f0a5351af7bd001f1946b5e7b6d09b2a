@@ -1,0 +1,215 @@
+<html>
+	<head>
+		<style>
+			/* Resetting some basic styles */
+			* {
+			    margin: 0;
+			    padding: 0;
+			    box-sizing: border-box;
+			}
+
+			/* Body Styles */
+			body {
+			    font-family: Arial, sans-serif;
+			    line-height: 1.6;
+			    background-color: #f8f8f8;
+			    color: #333;
+			}
+
+			/* Header Styles */
+			header {
+			    background-color: #131921;
+			    padding: 15px 0;
+			}
+
+			.navbar {
+			    display: flex;
+			    justify-content: space-between;
+			    align-items: center;
+			    max-width: 1200px;
+			    margin: 0 auto;
+			    padding: 0 20px;
+			}
+
+			.navbar .logo img {
+			    height: 30px;
+			}
+
+			.navbar nav ul {
+			    display: flex;
+			    list-style: none;
+			}
+
+			.navbar nav ul li {
+			    margin-right: 20px;
+			}
+
+			.navbar nav ul li a {
+			    color: #fff;
+			    text-decoration: none;
+			    font-size: 16px;
+			}
+
+			.navbar nav ul li a:hover {
+			    text-decoration: underline;
+			}
+
+			/* Hero Section Styles */
+			.hero {
+			    text-align: center;
+			    background-color: #232f3e;
+			    color: #fff;
+			    padding: 50px 20px;
+			}
+
+			.hero h1 {
+			    font-size: 3em;
+			    margin-bottom: 10px;
+			}
+
+			.hero p {
+			    font-size: 1.2em;
+			    margin-top: 10px;
+			}
+
+			/* Content Sections Styles */
+			section {
+			    padding: 40px 20px;
+			    max-width: 1200px;
+			    margin: 0 auto;
+			    background-color: #fff;
+			    margin-bottom: 20px;
+			    border-radius: 8px;
+			    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			h2 {
+			    font-size: 2em;
+			    margin-bottom: 20px;
+			    color: #232f3e;
+			}
+
+			ul {
+			    list-style-type: disc;
+			    margin-left: 20px;
+			}
+
+			ul li {
+			    margin-bottom: 10px;
+			}
+
+			.contact ul {
+			    list-style-type: none;
+			}
+
+			.contact ul li {
+			    margin-bottom: 10px;
+			}
+
+			/* Social Media Section Styles */
+			.social-media {
+			    padding: 40px 20px;
+			    max-width: 1200px;
+			    margin: 0 auto;
+			    background-color: #fff;
+			    margin-bottom: 20px;
+			    border-radius: 8px;
+			    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.social-media h2 {
+			    font-size: 2em;
+			    margin-bottom: 20px;
+			}
+
+			.social-media a {
+			    display: inline-block;
+			    margin-right: 15px;
+			    font-size: 18px;
+			    color: #232f3e;
+			    text-decoration: none;
+			}
+
+			.social-media a:hover {
+			    text-decoration: underline;
+			}
+
+			/* Footer Styles */
+			footer {
+			    background-color: #131921;
+			    color: #fff;
+			    text-align: center;
+			    padding: 20px;
+			    font-size: 14px;
+			}
+
+		</style>
+		
+	</head>
+	<body>
+		
+		<header>
+		       <div class="navbar">
+		           <div class="logo">
+		               <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+		           </div>
+		           <nav>
+		               <ul>
+		                   <li><a href="#">Home</a></li>
+		                   <li><a href="#">Shop</a></li>
+		                   <li><a href="#">About Us</a></li>
+		                   <li><a href="#">Contact</a></li>
+		               </ul>
+		           </nav>
+		       </div>
+		   </header>
+
+		   <section class="hero">
+		       <h1>About Amazon</h1>
+		       <p>We are committed to delivering an amazing shopping experience to customers worldwide.</p>
+		   </section>
+
+		   <section class="company-mission">
+		       <h2>Our Mission</h2>
+		       <p>Our mission is to be Earth's most customer-centric company, where customers can find and discover anything they might want to buy online.</p>
+		   </section>
+
+		   <section class="company-values">
+		       <h2>Our Values</h2>
+		       <ul>
+		           <li>Customer Obsession</li>
+		           <li>Innovation</li>
+		           <li>Operational Excellence</li>
+		           <li>Long-Term Thinking</li>
+		       </ul>
+		   </section>
+
+		   <section class="company-history">
+		       <h2>Our History</h2>
+		       <p>Amazon was founded in 1994 by Jeff Bezos in Seattle, Washington. Initially an online bookstore, it quickly diversified into an e-commerce platform offering a wide variety of products. Over the years, Amazon has expanded into areas such as cloud computing (AWS), entertainment, and artificial intelligence.</p>
+		   </section>
+
+		   <section class="contact">
+		       <h2>Contact Us</h2>
+		       <p>If you have any questions, feel free to contact us:</p>
+		       <ul>
+		           <li>Email: support@amazon.com</li>
+		           <li>Phone: +1-888-280-4331</li>
+		           <li>Address: 410 Terry Ave N, Seattle, WA 98109, USA</li>
+		       </ul>
+		   </section>
+
+		   <section class="social-media">
+		       <h2>Follow us on Social Media Platforms</h2>
+		       <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+		       <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+		       <a href="https://web.telegram.org/k/" target="_blank">Telegram</a>
+		       <a href="https://web.whatsapp.com/" target="_blank">Whatsapp</a>
+		   </section>
+
+		   <footer>
+		       <p>&copy; 2024 Amazon.com, Inc. or its affiliates</p>
+		   </footer>
+	    
+	</body>
+</html>

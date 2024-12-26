@@ -1,0 +1,81 @@
+package com.sathya.springbootmvc.controller;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.sathya.springbootmvc.entity.ProductEntity;
+import com.sathya.springbootmvc.model.ProductModel;
+import com.sathya.springbootmvc.service.ProductService;
+
+@Controller
+public class TestController {
+	@Autowired
+	 
+	ProductService productService;
+	
+	
+	@GetMapping("/Productform")
+	public String getProduct()
+	{
+		return "addproduct";
+	}
+	@PostMapping("/saveProduct")
+	public String saveProduct(ProductModel productModel)
+	{
+		System.out.println(productModel);
+		productService.saveProductDetails(productModel);
+			return "success";
+		
+	}
+	//To get the list of products(all products)
+	@GetMapping("/getallproducts")
+	public String getAllProducts(Model model)
+	{
+		List<ProductEntity> products=productService.getProducts();
+		model.addAttribute("products",products);
+		return "product-list";
+	}
+	
+	//To get the product based the id
+	@GetMapping("/searchproduct")
+	public String getProductId()
+	{
+		return "search-product";
+	}
+
+	@PostMapping("/searchbyid")
+	public String getProductById(@RequestParam  Long id,Model model)
+	{
+		ProductEntity product=productService.searchById(id);
+		model.addAttribute("product", product);
+		return "search-product";
+	}
+	
+	//delete the product based on the id
+	
+	@GetMapping("/delete/{id}")
+	public String deleteByIdForm(@PathVariable Long id)
+	{
+		productService.deleteProductById(id);
+		return "redirect:/getallproducts";
+	}                                                                         
+	//Edit the data based on id
+	
+	@GetMapping("/edit/{id}")
+	public String editById(@PathVariable Long id, Model model) {
+	    ProductModel product = productService.editByProductId(id);  // Call service to get the product by ID
+	    model.addAttribute("product", product);  // Add product to model for the view
+	    return "edit-product";  // Return the edit product view
+	}
+
+	
+
+}

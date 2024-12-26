@@ -1,0 +1,32 @@
+package com.sathya.springbootmvc.model;
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ProductModel {
+	
+	@NotBlank(message="Product name cannot be blank")
+	private String name;
+	
+	@NotBlank(message="Product brand cannot be blank")
+	private String brand;
+	
+	@Positive(message="Product Price must be greater than Zero")
+	private double price;
+	
+	@NotBlank(message="Product Made-In cannot be blank")
+	private String madeIn;
+	
+	@Min(value=1,message="Quantity must be atleast 1")
+	private int quantity;
+	private double discountRate;
+	private double taxRate;
+
+}

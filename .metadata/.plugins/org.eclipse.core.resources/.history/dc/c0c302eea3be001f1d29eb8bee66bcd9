@@ -1,0 +1,56 @@
+package com.sathya.springbootmvc.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sathya.springbootmvc.entity.ProductEntity;
+import com.sathya.springbootmvc.model.ProductModel;
+import com.sathya.springbootmvc.repository.ProductRepository;
+
+@Service
+public class ProductService {
+	@Autowired
+	ProductRepository productRepository;
+	public void saveProductDetails(ProductModel productModel) {
+		double discountPrice;
+		discountPrice=productModel.getPrice()*productModel.getDiscountRate()/100;
+		
+		double offerPrice;
+		offerPrice=productModel.getPrice()-discountPrice;
+		
+		double taxPrice;
+		taxPrice=productModel.getTaxRate()/100 * offerPrice;
+		
+		double finalePrice;
+		finalePrice=taxPrice+offerPrice;
+		
+		double stockValue;
+		stockValue=productModel.getPrice()*productModel.getQuantity();
+		
+		ProductEntity productEntity=new ProductEntity();
+		
+		productEntity.setName(productModel.getName());
+		productEntity.setBrand(productModel.getBrand());
+		productEntity.setMadeIn(productModel.getMadeIn());
+		productEntity.setPrice(productModel.getPrice());
+		productEntity.setQuantity(productModel.getQuantity());
+		productEntity.setDiscountRate(productModel.getDiscountRate());
+		productEntity.setTaxPrice(taxPrice);
+		productEntity.setDiscountPrice(discountPrice);
+		productEntity.setOfferPrice(offerPrice);
+		productEntity.setFinalePrice(finalePrice);
+		productEntity.setStockValue(stockValue);
+		
+		productRepository.save(productEntity);
+		
+	}
+	public List<ProductEntity> getAllProducts()
+	{
+		List<ProductEntity> products=productRepository.findAll();
+		return products;
+	}
+	
+
+}

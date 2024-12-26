@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Product Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            margin-left: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <form th:action="@{/saveProduct}" method="post">
+		
+        <label>Product Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>Brand:</label>
+        <input type="text" name="brand" required><br><br>
+
+        <label>Price:</label>
+        <input type="number" name="price" required><br><br>
+
+        <label>Made In:</label>
+        <input type="text" name="madeIn" required><br><br>
+
+        <label>Quantity:</label>
+        <input type="number" name="quantity" required><br><br>
+
+        <label>Discount Rate:</label>
+        <input type="number" name="discountRate" required><br><br>
+
+        <label>Tax Rate:</label>
+        <input type="number" name="taxRate" required><br><br>
+
+        <button type="submit">Save Product</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

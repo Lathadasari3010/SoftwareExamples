@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Employee List</title>
+	</head>
+	<body>
+		<div>
+			<h1 style="color: mediumvioletred;">Employee Details</h1>
+			<table border="1">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>NAME</th>
+						<th>SALARY</th>
+						<th>AGE</th>
+						<th>GENDER</th>
+						<th>DEPARTMENT</th>
+						<th>EXPERIENCE</th>
+						<th>BONUS</th>
+						<th>DA</th>
+						<th>HRA</th>
+						<th>PF</th>
+						<th>GROSS SALARY</th>
+						<th>TOTAL SALARY</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr th:each="employee:${employees}">
+						<td th:text="${employee.id}"></td>
+						<td th:text="${employee.name}"></td>
+						<td th:text="${employee.salary}"></td>
+						<td th:text="${employee.age}"></td>
+						<td th:text="${employee.gender}"></td>
+						<td th:text="${employee.department}"></td>
+						<td th:text="${employee.experience}"></td>
+						<td th:text="${employee.bonus}"></td>
+						<td th:text="${employee.da}"></td>
+						<td th:text="${employee.hra}"></td>
+						<td th:text="${employee.pf}"></td>
+						<td th:text="${employee.grossSalary}"></td>
+						<td th:text="${employee.totalSalary}"></td>	
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

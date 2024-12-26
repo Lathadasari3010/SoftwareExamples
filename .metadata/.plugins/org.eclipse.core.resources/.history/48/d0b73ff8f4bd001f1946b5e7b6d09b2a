@@ -1,0 +1,39 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+	    <div>
+	        <h2 style=> Amazon About-Us Page</h2>
+	    </div>
+	    <div>
+	        <h3>Who We Are</h3>
+	        <p>Amazon is a global leader in e-commerce, cloud computing, and digital streaming. Founded in 1994 by Jeff Bezos, Amazon started as an online bookstore and has grown into one of the world’s most innovative companies. Our mission is to be Earth's most customer-centric company, where customers can find and discover anything they might want to buy online.</p>
+
+	        <h1>Our Values</h1>
+	        <ul>
+	            <li>Customer Obsession: We start with the customer and work backwards.</li>
+	            <li>Innovation: We pride ourselves on being pioneers in the technology and retail industries.</li>
+	            <li>Operational Excellence: We focus on continuous improvement and operational efficiency.</li>
+	        </ul>
+
+	        <h3>What We Offer</h3>
+	        <p>From online shopping and digital content to web services and smart devices, Amazon aims to provide products and services that improve the lives of our customers. Popular services include:</p>
+	        <ul>
+	            <li>Amazon Prime</li>
+	            <li>Amazon Web Services (AWS)</li>
+	            <li>Alexa and Echo devices</li>
+	        </ul>
+	    </div>
+		<div>
+			<h2>Follow us on Social media Platforms like...</h2>
+			<a href="https://www.facebook.com/">FaceBook</a>
+			<a href="https://www.instagram.com/">Instagram</a>
+			<a href="https://web.telegram.org/k/">Telegram</a>
+			<a href="https://web.whatsapp.com/">Whatsapp</a>
+		</div>
+	    <div>
+	        <p>&copy; 2024 Amazon. All rights reserved.</p>
+	    </div>
+	</body>
+</html>

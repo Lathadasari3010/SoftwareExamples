@@ -1,0 +1,20 @@
+spring.application.name=SpringBoot
+server.port=8989
+
+# H2 Database Configuration
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=Latha@123
+
+#Dialect class for generate the queries
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# For showing Generated queries
+spring.jpa.show-sql=true
+
+# For showing Generated queries by formatting
+spring.jpa.properties.hibernate.format_sql=true
+
+# Hibernate auto schema generation
+spring.jpa.hibernate.ddl-auto=update

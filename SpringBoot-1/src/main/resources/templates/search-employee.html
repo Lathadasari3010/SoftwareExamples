@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Search Employee</title>
+	</head>
+	<body>
+		<!-- Form for Searching product by ID -->
+		<h2>Search Employee Details Based on ID</h2>
+		<form th:action="@{/searchbyid}" method="post">
+			<label>Enter Id</label>
+			<input type="number" name="id" required>
+			<br><br>
+			
+			<button type="submit">Search</button>
+		</form>
+		
+		<!-- This code is executed when the product is Available -->
+		<div th:if="${employee != null}">
+			<h3>Employee Details</h3>
+			<p>ID:<span th:text="${employee.id}"></span></p>
+			<p>Name:<span th:text="${employee.name}"></span></p>
+			<p>Salary:<span th:text="${employee.salary}"></span></p>
+			<p>Age:<span th:text="${employee.age}"></span></p>
+			<p>Gender:<span th:text="${employee.gender}"></span></p>
+			<p>Department:<span th:text="${employee.department}"></span></p>
+
+			<p>Experience:<span th:text="${employee.experience}"></span></p>
+			<p>Bonus:<span th:text="${employee.bonus}"></span></p>
+			<p>DA:<span th:text="${employee.da}"></span></p>
+			<p>HRA:<span th:text="${employee.hra}"></span></p>
+			<p>PF:<span th:text="${employee.pf}"></span></p>
+			<p>Gross Salary:<span th:text="${employee.grossSalary}"></span></p>
+			<p>Total Salary :<span th:text="${employee.totalSalary}"></span></p>
+			
+		</div>
+		
+		<!--Display if product is not found -->
+		<div th:if="${employee == null}">
+			<p>No Employee Found With the Given ID.</p>
+		</div>
+		
+		
+		
+			
+	</body>
+	
+</html>

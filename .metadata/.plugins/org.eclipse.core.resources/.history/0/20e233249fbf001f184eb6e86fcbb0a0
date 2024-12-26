@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Employee Form</title>
+	</head>
+	<body>
+		<h1>Employee Details</h1>
+			<form th:action="@{/saveEmployee}" method="post">
+			        <label > Employee Name:</label>
+			        <input type="text" name="name" required><br><br>
+
+			        <label >Employee Salary:</label>
+			        <input type="number" name="salary" required><br><br>
+
+			        <label >Employee Age:</label>
+			        <input type="number" name="age" required><br><br>
+					
+					<label > Gender:</label>
+				    <input type="text" name="gender" required><br><br>
+
+
+			        <label >Department:</label>
+			        <input type="text" name="department" required><br><br>
+
+			        <label >Experience:</label>
+			        <input type="text" name="experience" required><br><br>
+					
+					<label >HRA:</label>
+				    <input type="number" name="hra" required><br><br>
+					
+					<label >DA:</label>
+					<input type="number" name="da" required><br><br>
+					
+					<label >Provident Fund:</label>
+				    <input type="number" name="pf" required><br><br>
+
+
+
+
+			        <button type="submit">Save Employee Data</button>
+					<button type="reset">Reset</button>
+		</form>
+	</body>
+</html>
